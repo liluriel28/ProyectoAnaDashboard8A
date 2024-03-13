@@ -1,3 +1,12 @@
+<?php
+    // session_start();
+    // include("./model/connection.php");
+    // if(!isset($_SESSION["id"])){
+    //     header("location: ./login.php");
+    //     exit();   
+    // }
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +19,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Inbox</title>
+    <title>Dashboard</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -43,7 +52,7 @@
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
                         <a class="logo" href="index.html">
-                            <img src="images/icon/logo.png" alt="CoolAdmin" />
+                            <img src="images/icon/logo.png" alt="CoolAdmin" width="20%" />
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -61,13 +70,13 @@
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="index.html">Dashboard 1</a>
+                                    <a href="index.php">Dashboard 1</a>
                                 </li>
                                 <li>
-                                    <a href="index2.html">Dashboard 2</a>
+                                    <a href="index2.php">Dashboard 2</a>
                                 </li>
                                 <li>
-                                    <a href="index3.html">Dashboard 3</a>
+                                    <a href="index3.php">Dashboard 3</a>
                                 </li>
                                 <li>
                                     <a href="index4.html">Dashboard 4</a>
@@ -80,11 +89,11 @@
                         </li>
                         <li>
                             <a href="table.html">
-                                <i class="fas fa-table"></i>Tables</a>
+                                <i class="fas fa-table"></i>Tablas</a>
                         </li>
                         <li>
                             <a href="form.html">
-                                <i class="far fa-check-square"></i>Forms</a>
+                                <i class="far fa-check-square"></i>Formulario</a>
                         </li>
                         <li>
                             <a href="calendar.html">
@@ -99,7 +108,7 @@
                                 <i class="fas fa-copy"></i>Pages</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
-                                    <a href="login.html">Login</a>
+                                    <a href="login.php">Login</a>
                                 </li>
                                 <li>
                                     <a href="register.html">Register</a>
@@ -158,53 +167,53 @@
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="images/icon/logo.png" alt="Cool Admin" />
+                    <img src="images/icon/logo.png" alt="Cool Admin" width="60%" />
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
-                        <li class="has-sub">
+                        <li class="active has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="index.html">Dashboard 1</a>
+                                    <a href="index.php">Dashboard 1</a>
                                 </li>
                                 <li>
-                                    <a href="index2.html">Dashboard 2</a>
+                                    <a href="index2.php">Dashboard 2</a>
                                 </li>
                                 <li>
-                                    <a href="index3.html">Dashboard 3</a>
+                                    <a href="index3.php">Dashboard 3</a>
                                 </li>
                                 <li>
-                                    <a href="index4.html">Dashboard 4</a>
+                                    <a href="index4.php">Dashboard 4</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <a href="chart.html">
-                                <i class="fas fa-chart-bar"></i>Charts</a>
+                                <i class="fas fa-chart-bar"></i>Grafica</a>
                         </li>
                         <li>
                             <a href="table.html">
-                                <i class="fas fa-table"></i>Tables</a>
+                                <i class="fas fa-table"></i>Tablas</a>
                         </li>
                         <li>
                             <a href="form.html">
-                                <i class="far fa-check-square"></i>Forms</a>
+                                <i class="far fa-check-square"></i>Formularios</a>
                         </li>
                         <li>
                             <a href="calendar.html">
-                                <i class="fas fa-calendar-alt"></i>Calendar</a>
+                                <i class="fas fa-calendar-alt"></i>Calendario</a>
                         </li>
                         <li>
                             <a href="map.html">
-                                <i class="fas fa-map-marker-alt"></i>Maps</a>
+                                <i class="fas fa-map-marker-alt"></i>Mapa</a>
                         </li>
-                        <li class="active has-sub">
+                        <li class="has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-copy"></i>Pages</a>
+                                <i class="fas fa-copy"></i>Paginas</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
                                     <a href="login.html">Login</a>
@@ -270,7 +279,8 @@
                     <div class="container-fluid">
                         <div class="header-wrap">
                             <form class="form-header" action="" method="POST">
-                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." />
+                                <input class="au-input au-input--xl" type="text" name="search"
+                                    placeholder="Buscar" />
                                 <button class="au-btn--submit" type="submit">
                                     <i class="zmdi zmdi-search"></i>
                                 </button>
@@ -391,33 +401,33 @@
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
-                                            <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                            <img src="images/icon/logo.png" alt="Perfil" />
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">john doe</a>
+                                            <a class="js-acc-btn" href="#">Admin Utt</a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
                                                 <div class="image">
                                                     <a href="#">
-                                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                                        <img src="images/icon/logo.png" alt="Perfil" />
                                                     </a>
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="#">john doe</a>
+                                                        <a href="#">Admin Utt</a>
                                                     </h5>
-                                                    <span class="email">johndoe@example.com</span>
+                                                    <span class="email">admin@uttehuacan.edu.mx</span>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__body">
                                                 <div class="account-dropdown__item">
                                                     <a href="#">
-                                                        <i class="zmdi zmdi-account"></i>Account</a>
+                                                        <i class="zmdi zmdi-account"></i>Cuenta</a>
                                                 </div>
                                                 <div class="account-dropdown__item">
                                                     <a href="#">
-                                                        <i class="zmdi zmdi-settings"></i>Setting</a>
+                                                        <i class="zmdi zmdi-settings"></i>Configuración</a>
                                                 </div>
                                                 <div class="account-dropdown__item">
                                                     <a href="#">
@@ -426,7 +436,7 @@
                                             </div>
                                             <div class="account-dropdown__footer">
                                                 <a href="#">
-                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                                    <i class="zmdi zmdi-power"></i>Salir</a>
                                             </div>
                                         </div>
                                     </div>
@@ -436,19 +446,258 @@
                     </div>
                 </div>
             </header>
-            <!-- END HEADER DESKTOP-->
+            <!-- HEADER DESKTOP-->
 
             <!-- MAIN CONTENT-->
             <div class="main-content">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="row">
+                            <div class="col-md-12">
+                                <div class="overview-wrap">
+                                    <h2 class="title-1">Vista </h2>
+                                    <button class="au-btn au-btn-icon au-btn--blue">
+                                        <i class="zmdi zmdi-plus"></i>Agregar evento</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-t-25">
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c1">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <i class="zmdi zmdi-account-o"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>10368</h2>
+                                                <span>Alumnos disponibles</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-chart">
+                                            <canvas id="widgetChart1"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c2">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <i class="zmdi zmdi-shopping-cart"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>38</h2>
+                                                <span>Lugares disponibles</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-chart">
+                                            <canvas id="widgetChart2"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c3">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <i class="zmdi zmdi-calendar-note"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>16</h2>
+                                                <span>Actividades</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-chart">
+                                            <canvas id="widgetChart3"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c4">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <i class="zmdi zmdi-money"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>$1,066</h2>
+                                                <span>Gatos</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-chart">
+                                            <canvas id="widgetChart4"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="au-card recent-report">
+                                    <div class="au-card-inner">
+                                        <h3 class="title-2">Reportes recientes</h3>
+                                        <div class="chart-info">
+                                            <div class="chart-info__left">
+                                                <div class="chart-note">
+                                                    <span class="dot dot--blue"></span>
+                                                    <span>Actividades</span>
+                                                </div>
+                                                <div class="chart-note mr-0">
+                                                    <span class="dot dot--green"></span>
+                                                    <span>Alumnos</span>
+                                                </div>
+                                            </div>
+                                            <div class="chart-info__right">
+                                                <div class="chart-statis">
+                                                    <span class="index incre">
+                                                        <i class="zmdi zmdi-long-arrow-up"></i>25%</span>
+                                                    <span class="label">Actividades</span>
+                                                </div>
+                                                <div class="chart-statis mr-0">
+                                                    <span class="index decre">
+                                                        <i class="zmdi zmdi-long-arrow-down"></i>10%</span>
+                                                    <span class="label">Alumnos</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recent-report__chart">
+                                            <canvas id="recent-rep-chart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <h2 class="title-1 m-b-25">Registro de tareas</h2>
+                                <div class="table-responsive table--no-card m-b-40">
+                                    <table class="table table-borderless table-striped table-earning">
+                                        <thead>
+                                            <tr>
+                                                <th>Fecha</th>
+                                                <th>ID</th>
+                                                <th>Nombre</th>
+                                                <th class="text-right">Carrera</th>
+                                                <th class="text-right">Actividad</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>2018-09-29 05:57</td>
+                                                <td>100398</td>
+                                                <td>María García</td>
+                                                <td class="text-right">TICS</td>
+                                                <td class="text-right">1</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-28 01:22</td>
+                                                <td>100397</td>
+                                                <td>Juan Pérez</td>
+                                                <td class="text-right">$756.00</td>
+                                                <td class="text-right">1</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-27 02:12</td>
+                                                <td>100396</td>
+                                                <td>Laura Rodríguez</td>
+                                                <td class="text-right">$22.00</td>
+                                                <td class="text-right">2</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-26 23:06</td>
+                                                <td>100395</td>
+                                                <td>Carlos Martínez</td>
+                                                <td class="text-right">$1199.00</td>
+                                                <td class="text-right">1</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-25 19:03</td>
+                                                <td>100393</td>
+                                                <td>Sofía López</td>
+                                                <td class="text-right">$10.00</td>
+                                                <td class="text-right">3</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-29 05:57</td>
+                                                <td>100392</td>
+                                                <td>Diego Hernández</td>
+                                                <td class="text-right">$199.00</td>
+                                                <td class="text-right">6</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-24 19:10</td>
+                                                <td>100391</td>
+                                                <td>Ana Martín</td>
+                                                <td class="text-right">$699.00</td>
+                                                <td class="text-right">1</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>2018-09-22 00:43</td>
+                                                <td>100393</td>
+                                                <td>Andrés Fernández</td>
+                                                <td class="text-right">$10.00</td>
+                                                <td class="text-right">3</td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <h2 class="title-1 m-b-25">Alumnos Top</h2>
+                                <div class="au-card au-card--bg-blue au-card-top-countries m-b-40">
+                                    <div class="au-card-inner">
+                                        <div class="table-responsive">
+                                            <table class="table table-top-countries">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Andrés Fernández</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sofía López</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Carlos Martínez</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Laura Rodríguez</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Juan Pérez</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Laura Rodríguez</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>María García</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col-lg-6">
                                 <div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
                                     <div class="au-card-title" style="background-image:url('images/bg-title-01.jpg');">
                                         <div class="bg-overlay bg-overlay--blue"></div>
                                         <h3>
-                                            <i class="zmdi zmdi-account-calendar"></i>26 April, 2018</h3>
+                                            <i class="zmdi zmdi-account-calendar"></i>26 April, 2018
+                                        </h3>
                                         <button class="au-btn-plus">
                                             <i class="zmdi zmdi-plus"></i>
                                         </button>
@@ -508,7 +757,7 @@
                                             </div>
                                         </div>
                                         <div class="au-task__footer">
-                                            <button class="au-btn au-btn-load js-load-btn">load more</button>
+                                            <button class="au-btn au-btn-load js-load-btn">Saber más</button>
                                         </div>
                                     </div>
                                 </div>
@@ -518,7 +767,8 @@
                                     <div class="au-card-title" style="background-image:url('images/bg-title-02.jpg');">
                                         <div class="bg-overlay bg-overlay--blue"></div>
                                         <h3>
-                                            <i class="zmdi zmdi-comment-text"></i>New Messages</h3>
+                                            <i class="zmdi zmdi-comment-text"></i>New Messages
+                                        </h3>
                                         <button class="au-btn-plus">
                                             <i class="zmdi zmdi-plus"></i>
                                         </button>
@@ -538,7 +788,8 @@
                                                         <div class="au-message__item-text">
                                                             <div class="avatar-wrap">
                                                                 <div class="avatar">
-                                                                    <img src="images/icon/avatar-02.jpg" alt="John Smith">
+                                                                    <img src="images/icon/avatar-02.jpg"
+                                                                        alt="John Smith">
                                                                 </div>
                                                             </div>
                                                             <div class="text">
@@ -556,7 +807,8 @@
                                                         <div class="au-message__item-text">
                                                             <div class="avatar-wrap online">
                                                                 <div class="avatar">
-                                                                    <img src="images/icon/avatar-03.jpg" alt="Nicholas Martinez">
+                                                                    <img src="images/icon/avatar-03.jpg"
+                                                                        alt="Nicholas Martinez">
                                                                 </div>
                                                             </div>
                                                             <div class="text">
@@ -574,7 +826,8 @@
                                                         <div class="au-message__item-text">
                                                             <div class="avatar-wrap online">
                                                                 <div class="avatar">
-                                                                    <img src="images/icon/avatar-04.jpg" alt="Michelle Sims">
+                                                                    <img src="images/icon/avatar-04.jpg"
+                                                                        alt="Michelle Sims">
                                                                 </div>
                                                             </div>
                                                             <div class="text">
@@ -592,7 +845,8 @@
                                                         <div class="au-message__item-text">
                                                             <div class="avatar-wrap">
                                                                 <div class="avatar">
-                                                                    <img src="images/icon/avatar-05.jpg" alt="Michelle Sims">
+                                                                    <img src="images/icon/avatar-05.jpg"
+                                                                        alt="Michelle Sims">
                                                                 </div>
                                                             </div>
                                                             <div class="text">
@@ -610,7 +864,8 @@
                                                         <div class="au-message__item-text">
                                                             <div class="avatar-wrap online">
                                                                 <div class="avatar">
-                                                                    <img src="images/icon/avatar-04.jpg" alt="Michelle Sims">
+                                                                    <img src="images/icon/avatar-04.jpg"
+                                                                        alt="Michelle Sims">
                                                                 </div>
                                                             </div>
                                                             <div class="text">
@@ -628,7 +883,8 @@
                                                         <div class="au-message__item-text">
                                                             <div class="avatar-wrap">
                                                                 <div class="avatar">
-                                                                    <img src="images/icon/avatar-05.jpg" alt="Michelle Sims">
+                                                                    <img src="images/icon/avatar-05.jpg"
+                                                                        alt="Michelle Sims">
                                                                 </div>
                                                             </div>
                                                             <div class="text">
@@ -643,7 +899,7 @@
                                                 </div>
                                             </div>
                                             <div class="au-message__footer">
-                                                <button class="au-btn au-btn-load js-load-btn">load more</button>
+                                                <button class="au-btn au-btn-load js-load-btn">SABER MÁS</button>
                                             </div>
                                         </div>
                                         <div class="au-chat">
@@ -667,8 +923,10 @@
                                                             <img src="images/icon/avatar-02.jpg" alt="John Smith">
                                                         </div>
                                                         <div class="recei-mess-list">
-                                                            <div class="recei-mess">Lorem ipsum dolor sit amet, consectetur adipiscing elit non iaculis</div>
-                                                            <div class="recei-mess">Donec tempor, sapien ac viverra</div>
+                                                            <div class="recei-mess">Lorem ipsum dolor sit amet,
+                                                                consectetur adipiscing elit non iaculis</div>
+                                                            <div class="recei-mess">Donec tempor, sapien ac viverra
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -676,72 +934,16 @@
                                                     <span class="mess-time">30 Sec ago</span>
                                                     <div class="send-mess__inner">
                                                         <div class="send-mess-list">
-                                                            <div class="send-mess">Lorem ipsum dolor sit amet, consectetur adipiscing elit non iaculis</div>
+                                                            <div class="send-mess">Lorem ipsum dolor sit amet,
+                                                                consectetur adipiscing elit non iaculis</div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="au-chat-textfield">
                                                 <form class="au-form-icon">
-                                                    <input class="au-input au-input--full au-input--h65" type="text" placeholder="Type a message">
-                                                    <button class="au-input-icon">
-                                                        <i class="zmdi zmdi-camera"></i>
-                                                    </button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="au-card au-card--no-shadow au-card--no-pad m-b-40 au-card--border">
-                                    <div class="au-card-title" style="background-image:url('images/bg-title-02.jpg');">
-                                        <div class="bg-overlay bg-overlay--blue"></div>
-                                        <h3>
-                                            <i class="zmdi zmdi-comment-text"></i>Chat</h3>
-                                        <button class="au-btn-plus">
-                                            <i class="zmdi zmdi-plus"></i>
-                                        </button>
-                                    </div>
-                                    <div class="au-inbox-wrap">
-                                        <div class="au-chat au-chat--border">
-                                            <div class="au-chat__title">
-                                                <div class="au-chat-info">
-                                                    <div class="avatar-wrap online">
-                                                        <div class="avatar avatar--small">
-                                                            <img src="images/icon/avatar-02.jpg" alt="John Smith">
-                                                        </div>
-                                                    </div>
-                                                    <span class="nick">
-                                                        <a href="#">John Smith</a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="au-chat__content au-chat__content2 js-scrollbar5">
-                                                <div class="recei-mess-wrap">
-                                                    <span class="mess-time">12 Min ago</span>
-                                                    <div class="recei-mess__inner">
-                                                        <div class="avatar avatar--tiny">
-                                                            <img src="images/icon/avatar-02.jpg" alt="John Smith">
-                                                        </div>
-                                                        <div class="recei-mess-list">
-                                                            <div class="recei-mess">Lorem ipsum dolor sit amet elit</div>
-                                                            <div class="recei-mess">Donec tempor viverra</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="send-mess-wrap">
-                                                    <span class="mess-time">30 Sec ago</span>
-                                                    <div class="send-mess__inner">
-                                                        <div class="send-mess-list">
-                                                            <div class="send-mess">Lorem ipsum dolor sit amet elit</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="au-chat-textfield">
-                                                <form class="au-form-icon">
-                                                    <input class="au-input au-input--full au-input--h65" type="text" placeholder="Type a message">
+                                                    <input class="au-input au-input--full au-input--h65" type="text"
+                                                        placeholder="Type a message">
                                                     <button class="au-input-icon">
                                                         <i class="zmdi zmdi-camera"></i>
                                                     </button>
@@ -752,11 +954,20 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="copyright">
+                                    <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a
+                                            href="https://colorlib.com">Colorlib</a>.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- END MAIN CONTENT-->
+            <!-- END PAGE CONTAINER-->
         </div>
-        <!-- END PAGE CONTAINER-->
 
     </div>
 
