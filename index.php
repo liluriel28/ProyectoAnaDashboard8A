@@ -1,11 +1,37 @@
 <?php
-    // session_start();
-    // include("./model/connection.php");
-    // if(!isset($_SESSION["id"])){
-    //     header("location: ./login.php");
-    //     exit();   
-    // }
-    
+// Validar si se inicia sesion
+
+// session_start();
+// include("./model/connection.php");
+// if(!isset($_SESSION["id"])){
+//     header("location: ./login.php");
+//     exit();   
+// }
+
+// Alumonos disponibles LINEA 544
+
+// $consulta = "SELECT COUNT(*) AS total_alumnos FROM estudiante WHERE status = 1"; // Suponiendo que 1 significa disponible en el campo 'status'
+// $resultado = mysqli_query($conn, $consulta);
+
+// if ($resultado) {
+//     $fila = mysqli_fetch_assoc($resultado);
+//     $alumnosDisponibles = $fila['total_alumnos'];
+// } else {
+//     $alumnosDisponibles = 0;
+// }
+
+// Eventos
+
+// $consulta2 = "SELECT COUNT(*) AS total_eventos FROM evento";
+// $resultado2 = mysqli_query($conn, $consulta2);
+
+// if ($resultado2) {
+//     $fila = mysqli_fetch_assoc($resultado2);
+//     $totalEventos = $fila['total_eventos'];
+// } else {
+//     $totalEventos = 0;
+// }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -279,8 +305,7 @@
                     <div class="container-fluid">
                         <div class="header-wrap">
                             <form class="form-header" action="" method="POST">
-                                <input class="au-input au-input--xl" type="text" name="search"
-                                    placeholder="Buscar" />
+                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Buscar" />
                                 <button class="au-btn--submit" type="submit">
                                     <i class="zmdi zmdi-search"></i>
                                 </button>
@@ -404,7 +429,9 @@
                                             <img src="images/icon/logo.png" alt="Perfil" />
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">Admin Utt</a>
+                                            <a class="js-acc-btn" href="#">
+                                                <?php echo $nombre; ?>
+                                            </a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
@@ -415,9 +442,13 @@
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="#">Admin Utt</a>
+                                                        <a href="#">
+                                                            <?php echo $nombre; ?>
+                                                        </a>
                                                     </h5>
-                                                    <span class="email">admin@uttehuacan.edu.mx</span>
+                                                    <span class="email">
+                                                        <?php echo $correo; ?>
+                                                    </span>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__body">
@@ -470,7 +501,10 @@
                                                 <i class="zmdi zmdi-account-o"></i>
                                             </div>
                                             <div class="text">
-                                                <h2>10368</h2>
+                                                <!-- Aqui esta los alumnos disponibles -->
+                                                <h2>
+                                                    <?php echo $alumnosDisponibles; ?>
+                                                </h2>
                                                 <span>Alumnos disponibles</span>
                                             </div>
                                         </div>
@@ -488,7 +522,7 @@
                                                 <i class="zmdi zmdi-shopping-cart"></i>
                                             </div>
                                             <div class="text">
-                                                <h2>38</h2>
+                                                <h2>XD</h2>
                                                 <span>Lugares disponibles</span>
                                             </div>
                                         </div>
@@ -505,8 +539,11 @@
                                             <div class="icon">
                                                 <i class="zmdi zmdi-calendar-note"></i>
                                             </div>
+                                            <!-- Actividades disponibles -->
                                             <div class="text">
-                                                <h2>16</h2>
+                                                <h2>
+                                                    <?php echo $totalEventos; ?>
+                                                </h2>
                                                 <span>Actividades</span>
                                             </div>
                                         </div>
